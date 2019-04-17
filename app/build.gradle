@@ -1,0 +1,204 @@
+/*
+ * Copyright 2018 Google LLC
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.google.ar.sceneform.samples.hellosceneform"
+
+        // 24 is the minimum since ARCore only works with 24 and higher.
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            /*
+             * Sceneform is available for the following ABIs: arm64-v8a, armv7a,
+             * x86_64 and x86. This sample app enables arm64-v8a to run on
+             * devices and x86 to run on the emulator. Your application should
+             * list the ABIs most appropriate to minimize APK size (arm64-v8a recommended).
+             */
+            abiFilters 'arm64-v8a', 'x86'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation "com.google.ar.sceneform:core:1.4.0"
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.4.0"
+    implementation "com.android.support:appcompat-v7:27.1.1"
+
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+
+sceneform.asset('sampledata/models/andy.obj',
+        'default',
+        'sampledata/models/andy.sfa',
+        'src/main/res/raw/andy')
+
+
+
+sceneform.asset('sampledata/models/model.obj',
+        'default',
+        'sampledata/models/model.sfa',
+        'src/main/res/raw/model')
+
+sceneform.asset('sampledata/models/table.obj',
+        'default',
+        'sampledata/models/table.sfa',
+        'src/main/res/raw/table')
+
+sceneform.asset('sampledata/models/chair.obj',
+        'default',
+        'sampledata/models/chair.sfa',
+        'src/main/res/raw/chair')
+
+sceneform.asset('sampledata/models/bookshelf.obj',
+        'default',
+        'sampledata/models/bookshelf.sfa',
+        'src/main/res/raw/bookshelf')
+
+
+
+sceneform.asset('sampledata/models/chair1.obj',
+        'default',
+        'sampledata/models/chair1.sfa',
+        'src/main/res/raw/chair1')
+
+sceneform.asset('sampledata/models/draft_table.obj',
+        'default',
+        'sampledata/models/draft_table.sfa',
+        'src/main/res/raw/draft_table')
+
+sceneform.asset('sampledata/models/lamp.obj',
+        'default',
+        'sampledata/models/lamp.sfa',
+        'src/main/res/raw/lamp')
+
+sceneform.asset('sampledata/models/bed.obj',
+        'default',
+        'sampledata/models/bed.sfa',
+        'src/main/res/raw/bed')
+
+sceneform.asset('sampledata/models/desk.obj',
+        'default',
+        'sampledata/models/desk.sfa',
+        'src/main/res/raw/desk')
+
+
+sceneform.asset('sampledata/models/lamp2.obj',
+        'default',
+        'sampledata/models/lamp2.sfa',
+        'src/main/res/raw/lamp2')
+
+sceneform.asset('sampledata/models/lamp3.obj',
+        'default',
+        'sampledata/models/lamp3.sfa',
+        'src/main/res/raw/lamp3')
+
+sceneform.asset('sampledata/models/bed2.obj',
+        'default',
+        'sampledata/models/bed2.sfa',
+        'src/main/res/raw/bed2')
+
+sceneform.asset('sampledata/models/bench.obj',
+        'default',
+        'sampledata/models/bench.sfa',
+        'src/main/res/raw/bench')
+
+sceneform.asset('sampledata/models/table2.obj',
+        'default',
+        'sampledata/models/table2.sfa',
+        'src/main/res/raw/table2')
+
+sceneform.asset('sampledata/models/chair2.obj',
+        'default',
+        'sampledata/models/chair2.sfa',
+        'src/main/res/raw/chair2')
+
+sceneform.asset('sampledata/models/chair3.obj',
+        'default',
+        'sampledata/models/chair3.sfa',
+        'src/main/res/raw/chair3')
+
+sceneform.asset('sampledata/models/chair4.obj',
+        'default',
+        'sampledata/models/chair4.sfa',
+        'src/main/res/raw/chair4')
+
+sceneform.asset('sampledata/models/piano.obj',
+        'default',
+        'sampledata/models/piano.sfa',
+        'src/main/res/raw/piano')
+
+sceneform.asset('sampledata/models/chair_got.obj',
+        'default',
+        'sampledata/models/chair_got.sfa',
+        'src/main/res/raw/chair_got')
+
+sceneform.asset('sampledata/models/lamp4.obj',
+        'default',
+        'sampledata/models/lamp4.sfa',
+        'src/main/res/raw/lamp4')
+
+sceneform.asset('sampledata/models/bed3.obj',
+        'default',
+        'sampledata/models/bed3.sfa',
+        'src/main/res/raw/bed3')
+
+sceneform.asset('sampledata/models/desk3.obj',
+        'default',
+        'sampledata/models/desk3.sfa',
+        'src/main/res/raw/desk3')
+
+sceneform.asset('sampledata/models/sofa2.obj',
+        'default',
+        'sampledata/models/sofa2.sfa',
+        'src/main/res/raw/sofa2')
+
+sceneform.asset('sampledata/models/sofa3.obj',
+        'default',
+        'sampledata/models/sofa3.sfa',
+        'src/main/res/raw/sofa3')
+
+
+sceneform.asset('sampledata/models/speaker.obj',
+        'default',
+        'sampledata/models/speaker.sfa',
+        'src/main/res/raw/speaker')
+
+sceneform.asset('sampledata/models/speaker2.obj',
+        'default',
+        'sampledata/models/speaker2.sfa',
+        'src/main/res/raw/speaker2')

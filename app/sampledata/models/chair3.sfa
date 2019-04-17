@@ -1,0 +1,74 @@
+{
+   bound_relative_root: {
+      x: 0.5,
+      y: 0,
+      z: 0.5,
+   },
+   materials: [
+      {
+         name: "_crayfishdiffuse",
+         parameters: [
+            {
+               baseColor: null,
+            },
+            {
+               baseColorTint: [
+                  0.54509803921,
+                  0.27058823529,
+                  0.07450980392,
+                  0.1,
+               ],
+            },
+            {
+               metallic: 0,
+            },
+            {
+               roughness: 0.25,
+            },
+            {
+               opacity: null,
+            },
+         ],
+         source: "build/sceneform_sdk/default_materials/obj_material.sfm",
+      },
+      {
+         name: "02___Default",
+         parameters: [
+            {
+               baseColor: null,
+            },
+            {
+               baseColorTint: [
+                  0.039199999999999999,
+                  0.039199999999999999,
+                  0.039199999999999999,
+                  1,
+               ],
+            },
+            {
+               metallic: 0,
+            },
+            {
+               roughness: 0.408248,
+            },
+            {
+               opacity: null,
+            },
+         ],
+         source: "build/sceneform_sdk/default_materials/obj_material.sfm",
+      },
+   ],
+   model: {
+      attributes: [
+         "Position",
+         "TexCoord",
+         "Orientation",
+      ],
+      collision: {},
+      file: "sampledata/models/chair3.obj",
+      name: "chair3",
+      recenter: "root",
+      scale: 7.0000000000000002e-06,
+   },
+   version: "0.52:1",
+}
